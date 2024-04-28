@@ -1,3 +1,5 @@
+// Lucia Bellingeri, Comision 4, dni 44110205
+
 PImage imagen;
 void setup(){
   size(800,400);
