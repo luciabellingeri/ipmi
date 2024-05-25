@@ -6,15 +6,15 @@ String texto3 = "Ambientado en la ciudad de Nueva York, el anime refleja de mane
 String texto4 = "La serie aborda temas complejos y actuales como la violencia, el abuso y la corrupción, añadiendo profundidad y relevancia a la narrativa.";
 
 float unoX = 0, unoY = 0, velX = 0.2, velY = 0.2;
-float dosX = 640, dosY = 240, veldosX = -1.44 * 1.1, veldosY = 0; // Se ajusta la velocidad en un 10% más rápido
+float dosX = 640, dosY = 240, veldosX = -1.44 * 1.1, veldosY = 0; 
 float tresSize = 10, tresX = 0, tresY = 480, veltresSize = 5, veltresX = 0, veltresY = -1;
-float cuatroX = 100, cuatroY = 100, velcuatroX = -1.2 * 0.7, velcuatroY = -1.2 * 0.7; // Se ajusta la velocidad en un 30% más lento
+float cuatroX = 100, cuatroY = 100, velcuatroX = -1.2 * 0.7, velcuatroY = -1.2 * 0.7; 
 
 int tiempoInicio, tiempoPantalla = 550;
 
 boolean reiniciar = false;
-boolean botonPresionado = false; // Variable para rastrear si el botón de reinicio está siendo presionado
-boolean mouseEncimaBoton = false; // Variable para rastrear si el mouse está encima del botón
+boolean botonPresionado = false; 
+boolean mouseEncimaBoton = false; 
 
 PFont fuentenueva;
 
@@ -32,7 +32,6 @@ void setup() {
 }
 
 void draw() {
-  background(255);
 
   if (estado.equals("pantallauno")) {
     displayImage(imagen1);
@@ -97,13 +96,13 @@ void draw() {
     text(texto4, cuatroX, cuatroY, 500, textHeight4);
     
     // Botón para reiniciar la presentación
-    if (mouseEncimaBoton) { // Cambiar color si el mouse está encima del botón
+    if (mouseEncimaBoton) { 
       fill(255);
     } else {
       fill(50);
     }
     rect(20, height - 70, 140, 50, 10);
-    if (mouseEncimaBoton) { // Cambiar color del texto si el mouse está encima del botón
+    if (mouseEncimaBoton) { 
       fill(0);
     } else {
       fill(255);
@@ -129,7 +128,7 @@ void draw() {
     }
   }
 
-  // Cambio de pantalla después de cierto tiempo
+  // Cambio de PANTALLAS
   if (frameCount - tiempoInicio > tiempoPantalla && estado != "pantallacuatro") {
     siguientePantalla();
   }
